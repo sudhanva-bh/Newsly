@@ -2,7 +2,11 @@
 
 **Newsly** is a modern, full-featured news reader app built with Flutter. It aggregates news from multiple sources, provides weather and stock updates, and allows users to bookmark articles for later reading. The app is designed to be fast, visually appealing, and easy to use, with a focus on delivering a personalized and informative experience.
 
+🚨 **IMPORTANT:** Before running the app, please create a `.env` file in the root directory of the project with your API keys
 ---
+
+
+
 
 ## Features
 
@@ -81,13 +85,14 @@
    flutter pub get
    ```
 3. **Set up your .env file**  
+🚨 **IMPORTANT:** Before running the app, please create a `.env` file in the root directory of the project with your API keys:  
    Add your API keys for NewsData.io, OpenWeatherMap, and Finnhub:
    ```
    NEWS_API_KEY=your_newsdata_api_key
    WEATHER_API_KEY=your_openweathermap_api_key
    STOCK_API_KEY=your_finnhub_api_key
    ```
-4. **Run the app**
+5. **Run the app**
    ```
    flutter run
    ```
