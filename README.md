@@ -2,7 +2,7 @@
 
 **Newsly** is a modern, full-featured news reader app built with Flutter. It aggregates news from multiple sources, provides weather and stock updates, and allows users to bookmark articles for later reading. The app is designed to be fast, visually appealing, and easy to use, with a focus on delivering a personalized and informative experience.
 
-🚨 **IMPORTANT:** Before running the app, please create a `.env` file in the root directory of the project with your API keys
+🚨 **IMPORTANT:** Before running the app, please create a `.env` file in the root directory of the project with your API keys. Try out the app by cloning app_release.apk.
 ---
 
 
