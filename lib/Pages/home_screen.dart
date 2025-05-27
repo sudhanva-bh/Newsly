@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         elevation: 4,
         backgroundColor: Colors.transparent,
-        centerTitle: false, // Align left to fit logo + title nicely
+        centerTitle: false,
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -53,14 +53,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ),
-        // App bar with logo and title
         title: Row(
           children: [
-            Image.asset(
-              'assets/logo.png', // your logo image path here
-              height: 32,
-              width: 32,
-            ),
+            Image.asset('assets/logo.png', height: 32, width: 32),
             const SizedBox(width: 2.5),
             const Text(
               "ewsly",
@@ -73,7 +68,38 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.help_outline, color: Colors.white),
+            tooltip: 'Tutorial',
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return AlertDialog(
+                    title: const Text('Welcome to Newsly!'),
+                    content: const Text(
+                      'Here are some tips to get you started:\n\n'
+                      '- Pull down to refresh the latest weather, stocks, and news.\n'
+                      '- Tap on any news item to read more details.\n'
+                      '- Double Tap on any news item add/remove it from bookmarks\n'
+                      '- Long press any news item to get a preview\n\n'
+                      'Enjoy your experience!',
+                    ),
+                    actions: [
+                      ElevatedButton(
+                        onPressed: () => Navigator.of(context).pop(),
+                        child: const Text('Got it'),
+                      ),
+                    ],
+                  );
+                },
+              );
+            },
+          ),
+        ],
       ),
+
       body: SafeArea(
         child: RefreshIndicator(
           onRefresh: _refreshData,
